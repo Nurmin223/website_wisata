@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Pantai Hoga - Surga Tropis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset CSS */
+body, h1, h2, p, a, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    font-size: 18px;
+}
+
+header {
+    background-image: url('https://www.tropilogy.com/wp-content/uploads/2023/03/img_seafloor-in-wakatobi-national-park-2.jpg');
+    color: white;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.divephotoguide.com/images/lightboximage/orig/1527148970.jpg');
+    color: white;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Nunito', sans-serif;
+        }
+        section p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .parallax {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+.about-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.activity-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Form Section */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+#form-response {
+    margin-top: 20px;
+    color: green;
+    display: none;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+} 
+footer a {
+            color: #ff7f50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Error Style */
+input:invalid, textarea:invalid {
+    border-color: red;
+}
+
+input:valid, textarea:valid {
+    border-color: green;
+}
+
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Spot Diving Binongko</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#activities">Aktivitas</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+        <div class="hero" id="home">
+            <h2>Selamat Datang di Surga Diving Binongko</h2>
+            <p>Tempat terbaik untuk snorkeling, diving, dan bersantai.</p>
+            <a href="#about" class="btn">Lihat Lebih Banyak</a>
+        </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Tentang Spot Diving Binongko</h2>
+            <div class="parallax">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xhetg530Rq4?si=EkcJQ_UJyjJD76HK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>Pulau Binongko, bagian dari kepulauan Wakatobi di Indonesia, menawarkan pengalaman diving yang tak tertandingi. Dikenal sebagai "Pulau Pandai Besi," Binongko juga memiliki terumbu karang yang indah, kehidupan laut yang beragam, dan air yang jernih yang menarik penyelam dari seluruh dunia.</p>
+        <p>Binongko tidak hanya menjadi surga bagi para penyelam tetapi juga menyimpan nilai budaya dan tradisi yang unik, termasuk keahlian pandai besi yang legendaris.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Galeri Keindahan Spot Diving Binongko</h2>
+            <div class="gallery-grid">
+                <img src="https://phinemo.com/wp-content/uploads/2020/01/80726174_129548211439389_9202735099592656457_n.jpg" alt="Pantai Hoga 1">
+                <img src="https://ik.imagekit.io/tvlk/blog/2020/03/diving-di-komodo.jpeg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="Pantai Hoga 2">
+                <img src="https://ik.imagekit.io/tvlk/blog/2020/03/wisata-di-Manado-9-Citilink.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="Pantai Hoga 3">
+                <img src="https://ik.imagekit.io/tvlk/blog/2024/08/jnSynA9n-image.jpeg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="Pantai Hoga 4">
+                <img src="https://ik.imagekit.io/tvlk/blog/2024/08/zhIts6zO-image.jpeg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="Pantai Hoga 5">
+                <img src="https://superlive.id/storage/articles/b8f5f606-b0d8-4d8c-b2c3-0a1a410419bf.jpg" alt="Pantai Hoga 6">
+                <img src="https://blog.otaqu.id/wp-content/uploads/2023/03/Best-Diving-Spots.png" alt="Pantai Hoga 7">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguKrom3DIenL1QGaycRrcpLTuj_RXXWv6Dat0uF-x8-qDtTCxE7dr3buIQVdopdeHJHJTilfISISRVD4BSbqpOmvukDIslc8T8KP891pZffP5zr10wEvHD1plS-NsPb8dXw_NagXVWU2O8/s1280/Inilah+Spot+Terbaik+Penyelaman+di+Sulawesi+Tenggara.jpg" alt="Pantai Hoga 8">
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities">
+        <div class="container">
+            <h2>Spot Diving Terbaik</h2>
+            <p>Tiga tempat spot diving terbaik di binongko.</p>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <img src="https://www.pusatmarine.com/wp-content/uploads/2023/04/images-12.jpeg" alt="snorkling">
+                    <h3>Spot 1: Surga Karang</h3>
+                <p>Nikmati keindahan taman karang yang penuh dengan ikan berwarna-warni dan makhluk laut lainnya. Spot ini wajib dikunjungi bagi fotografer bawah laut.</p>
+                </div>
+                <div class="activity-card">
+                    <img src="https://tempatwisataseru.com/wp-content/uploads/2022/10/FERNANDO-DE-NORONHA-via-Etoursbrazildmc.jpg" alt="Diving">
+                    <h3>Spot 2: Teluk Penyu</h3>
+                <p>Saksikan penyu laut yang anggun berenang di perairan tenang saat Anda menjelajahi spot diving ini.</p>
+                </div>
+                <div class="activity-card">
+                    <img src="https://www.befreetour.com/img/produk/Raja-Ampat-Scuba-Diving-Experience/Raja-Ampat-Scuba-Diving-Experience_3ae924abbe9e615b12505d2973466857d428fb24.jpg" alt="bersantai">
+                    <h3>Spot 3: Dinding Biru Dalam</h3>
+                <p>Untuk penyelam berpengalaman, wall diving ini menawarkan sensasi penyelaman dalam dan pertemuan dengan spesies laut besar seperti hiu dan pari.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <form id="contactForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit" class="btn">Kirim</button>
+                
+                <div id="form-response"></div>
+            </form>
+        </div>
+    </section>    
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Pantai Hoga. Semua Hak Dilindungi.</p>
+            <p>Temukan kami di <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+        </div>
+    </footer>
+    <script>
+        // JavaScript untuk form submit
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Mencegah submit default
+    let formResponse = document.getElementById('form-response');
+    formResponse.innerText = "Terima kasih! Pesan Anda telah dikirim.";
+    formResponse.style.display = 'block';
+});
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Mencegah submit default
+    
+    let formResponse = document.getElementById('form-response');
+    formResponse.innerText = "Terima kasih! Pesan Anda telah terkirim.";
+    formResponse.style.display = 'block';
+    
+    // Reset form
+    this.reset();
+    
+    // Hide form response after 3 detik
+    setTimeout(() => {
+        formResponse.style.display = 'none';
+    }, 3000); // 3 detik
+});
+    </script>
+</body>
+</html>

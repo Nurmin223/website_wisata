@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Pantai Hoga - Surga Tropis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset CSS */
+body, h1, h2, p, a, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    font-size: 18px;
+}
+
+header {
+    background-image: url('https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/03/03/Hoga-Wakatobi-1245285251.jpeg');
+    color: white;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://www.jabatowisata.com/index/jabato/files/wakatobi6d5ntourpackage_pulauwaha_22.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Nunito', sans-serif;
+        }
+        section p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .parallax {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+.about-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.activity-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Form Section */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+#form-response {
+    margin-top: 20px;
+    color: green;
+    display: none;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+} 
+footer a {
+            color: #ff7f50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Error Style */
+input:invalid, textarea:invalid {
+    border-color: red;
+}
+
+input:valid, textarea:valid {
+    border-color: green;
+}
+
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Pantai Hoga</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#activities">Aktivitas</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+        <div class="hero" id="home">
+            <h2>Jelajahi Surga Tropis di Pantai Hoga</h2>
+            <p>Tempat terbaik untuk snorkeling, diving, dan bersantai di pantai putih yang menakjubkan.</p>
+            <a href="#about" class="btn">Lihat Lebih Banyak</a>
+        </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Tentang Pantai Hoga</h2>
+            <div class="parallax">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/17Q89BKYvwA?si=A7l3N5dwrSEyCp_m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>Pantai Hoga terletak di Sulawesi Tenggara, terkenal dengan terumbu karang yang indah dan pantai berpasir putih. Ini adalah surga bagi pecinta snorkeling dan diving yang ingin menikmati keindahan bawah laut yang menakjubkan.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Galeri Keindahan Pantai Hoga</h2>
+            <div class="gallery-grid">
+                <img src="https://www.catatanaktual.id/wp-content/uploads/2023/01/catatn-aktual-wisata-2-900x600.jpg" alt="Pantai Hoga 1">
+                <img src="https://indonesiakaya.com/wp-content/uploads/2020/10/Untuk_mencapai_Pulau_Hoga_dapat_melalui_Bandara_Matahora_di_Pulau_Wangi-wangi_Kabupaten_Wakatobi.jpg" alt="Pantai Hoga 2">
+                <img src="https://media.telisik.id/assets/img/news/2020/01/kembangkan_pantai_sambano_pemda_wakatobi_tunggu_perpres_bop.jpg" alt="Pantai Hoga 3">
+                <img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/ketiknews/original/210730104132-Pulau.jpg" alt="Pantai Hoga 4">
+                <img src="https://cdn.idntimes.com/content-images/community/2017/11/d8-d09445454398243a0808e0a5f65af23f.jpg" alt="Pantai Hoga 5">
+                <img src="https://torch.id/cdn/shop/articles/Artikel_168_-_Preview.webp?v=1713339530" alt="Pantai Hoga 6">
+                <img src="https://wisato.id/wp-content/uploads/2022/10/Pulau-Hoga-wakatobi-2-scaled.jpg" alt="Pantai Hoga 7">
+                <img src="https://cdn.idntimes.com/content-images/community/2017/11/d2-49f0666bb9aeccfe985e395b1efc9041.jpg" alt="Pantai Hoga 8">
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities">
+        <div class="container">
+            <h2>Aktivitas Menarik</h2>
+            <p>Pantai Hoga menawarkan berbagai aktivitas menarik seperti snorkeling, diving, berselancar, dan menjelajahi keindahan bawah laut.</p>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <img src="https://ceritadestinasi.wordpress.com/wp-content/uploads/2017/11/amalhermawan27-1510029021354.jpg?w=723" alt="snorkling">
+                    <h3>Snorkeling</h3>
+                    <p>Jelajahi terumbu karang yang menakjubkan dan keanekaragaman hayati laut yang luar biasa.</p>
+                </div>
+                <div class="activity-card">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/78/e5/17/snorkelling.jpg?w=600&h=400&s=1" alt="Diving">
+                    <h3>Diving</h3>
+                    <p>Dive deep untuk menemukan dunia bawah laut yang menakjubkan di sekitar Pantai Hoga.</p>
+                </div>
+                <div class="activity-card">
+                    <img src="https://profakta.com/wp-content/uploads/2020/12/wisata-wakatobi.jpg" alt="bersantai">
+                    <h3>bersantai</h3>
+                    <p>Nikmati suasana pantai yang hangat dan sejuk dengan bersantai di pasir pantai.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <form id="contactForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit" class="btn">Kirim</button>
+                
+                <div id="form-response"></div>
+            </form>
+        </div>
+    </section>    
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Pantai Hoga. Semua Hak Dilindungi.</p>
+            <p>Temukan kami di <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+        </div>
+    </footer>
+    <script>
+        // JavaScript untuk form submit
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Mencegah submit default
+    let formResponse = document.getElementById('form-response');
+    formResponse.innerText = "Terima kasih! Pesan Anda telah dikirim.";
+    formResponse.style.display = 'block';
+});
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Mencegah submit default
+    
+    let formResponse = document.getElementById('form-response');
+    formResponse.innerText = "Terima kasih! Pesan Anda telah terkirim.";
+    formResponse.style.display = 'block';
+    
+    // Reset form
+    this.reset();
+    
+    // Hide form response after 3 detik
+    setTimeout(() => {
+        formResponse.style.display = 'none';
+    }, 3000); // 3 detik
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantai Sombu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: url('https://moneter.id/uploads/ccc223397e74ab5d98c1096f28bd0c55.jpg') no-repeat center center/cover;
+            height: 300px;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        nav {
+            background-color: #aadaf4;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .parallax {
+            background-image: url('tenun-background.jpg'); /* Background Image */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 50px 0;
+            color: white;
+            text-align: center;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .activities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .activity {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .activity h3 {
+            color: #0288d1;
+        }
+        .map-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .map-container .text {
+            flex: 1;
+        }
+        .map-container iframe {
+            flex: 1;
+            border: none;
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            border-radius: 5px;
+        }
+/* Kolom Komentar */
+.comment-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment-section h3 {
+    margin-bottom: 15px;
+    color: #007acc;
+}
+
+.comment-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.comment-section input,
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.comment-section button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-section button:hover {
+    background-color: #005f99;
+}
+
+#comment-list {
+    margin-top: 20px;
+}
+
+#comment-list h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.comment-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e6f4f9;
+    border: 1px solid #cce6f0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+        footer {
+            background-color: #aadaf4;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+/* Responsive Design */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 0;
+    }
+
+    .logo h1 {
+        font-size: 1.8em;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Pantai Sombu</h1>
+        <p>Keindahan alam yang memikat hati di Wakatobi</p>
+    </header>
+    <nav>
+        <a href="#description">Deskripsi</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#activities">Aktivitas</a>
+        <a href="#komentar">Komentar</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+    <section id="description">
+        <h2>Tentang Pantai Sombu</h2>
+        <div class="parallax">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6KSMKXazuuM?si=WJKURRA2QS7zIqBH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p>Pantai Sombu adalah surga tersembunyi di Wakatobi, Sulawesi Tenggara. Dikelilingi oleh pemandangan laut biru yang jernih dan pasir putih yang lembut, Pantai Sombu menjadi tempat favorit untuk snorkeling, diving, dan bersantai bersama keluarga. Dengan terumbu karang yang masih alami, Pantai Sombu menjadi daya tarik bagi wisatawan lokal maupun mancanegara.</p>
+        <p>Di Pantai Sombu, Anda juga dapat menikmati kuliner khas Wakatobi yang menggugah selera, seperti ikan bakar segar dan hidangan laut lainnya.</p>
+    </section>
+    <section id="gallery">
+        <h2>Galeri</h2>
+        <div class="gallery">
+            <img src="https://awsimages.detik.net.id/community/media/visual/2021/12/04/menyelami-keindahan-bawah-laut-wakatobi_169.jpeg?w=600&q=90" alt="Pemandangan Pantai Sombu">
+            <img src="https://cdngnfi2.sgp1.digitaloceanspaces.com/gnfi/uploads/articles/wakatobi-bastian-as-shutterstock-bb25228dd0df120b93e1ae645c7f2030.jpg" alt="Snorkeling di Pantai Sombu">
+            <img src="https://statik.tempo.co/data/2022/06/13/id_1117349/1117349_720.jpg" alt="Pasir Putih Pantai Sombu">
+            <img src="https://www.acebanten.com/wp-content/uploads/2024/04/pupr-13.jpg" alt="Matahari Terbenam di Pantai Sombu">
+        </div>
+    </section>
+    <section id="activities">
+        <h2>Aktivitas</h2>
+        <div class="activities">
+            <div class="activity">
+                <h3>Snorkeling</h3>
+                <p>Temukan keindahan bawah laut dengan snorkeling di perairan Pantai Sombu.</p>
+                <img src="https://sultratop.com/wp-content/uploads/2024/01/PSX_2064.jpg" alt="Snorkeling Icon">
+            </div>
+            <div class="activity">
+                <h3>Menyelam</h3>
+                <p>Nikmati pengalaman menyelam dan saksikan keindahan terumbu karang yang memukau.</p>
+                <img src="https://sultratop.com/wp-content/uploads/2024/07/1685217255099-01-fotor-20240723134432.png" alt="Snorkeling Icon">
+            </div>
+            <div class="activity">
+                <h3>Bersantai</h3>
+                <p>Berjemur di pasir putih atau duduk santai menikmati pemandangan laut.</p>
+                <img src="https://telisik.id/assets/img/news/files/WhatsApp%20Image%202023-07-22%20at%2016_41_57.jpeg" alt="Snorkeling Icon">
+            </div>
+        </div>
+    </section>
+     <!-- Kolom Komentar -->
+     <section id="komentar">
+     <section class="comment-section">
+        <h3>Kolom Komentar</h3>
+        <form id="comment-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+            
+            <label for="comment">Komentar:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Tulis komentar Anda di sini" required></textarea>
+            
+            <button type="submit">Kirim Komentar</button>
+        </form>
+        <div id="comment-list">
+            <h4>Komentar Pengunjung:</h4>
+        </div>
+     </section>
+    
+    <footer>
+        <section id="contact">
+        <h2>Lokasi dan Kontak</h2>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.0192023908266!2d123.568075!3d-5.452581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da4055555555555%3A0x5555555555555555!2sPantai%20Sombu!5e0!3m2!1sid!2sid!4v1690000000000!5m2!1sid!2sid"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="details">
+                <h3>Informasi Kontak</h3>
+                <p><strong>Alamat:</strong> Desa Sombu, Wakatobi, Sulawesi Tenggara</p>
+                <p><strong>Telepon:</strong> +62 812 345 6789</p>
+                <p><strong>Email:</strong> <a href="mailto:info@pantaisombu.com">info@pantaisombu.com</a></p>
+                <p><strong></strong> 
+                    <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt="Instagram"></a>
+                </p>
+            </div>
+        </div>
+    </section>
+        <p>&copy; 2024 Pantai Sombu. Semua Hak Dilindungi.</p>
+    </footer>
+    <script>
+        // Fungsi untuk menangani pengiriman komentar
+    document.getElementById("comment-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    // Ambil nilai dari input
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+
+    // Buat elemen komentar baru
+    const commentItem = document.createElement("div");
+    commentItem.classList.add("comment-item");
+    commentItem.innerHTML = `<strong>${name}:</strong><p>${comment}</p>`;
+
+    // Tambahkan komentar ke daftar
+    const commentList = document.getElementById("comment-list");
+    commentList.appendChild(commentItem);
+
+    // Bersihkan form
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+
+    if (!name.trim() || !comment.trim()) {
+        alert("Nama dan komentar tidak boleh kosong!");
+        return;
+    }
+    
+    });
+    </script>
+</body>
+</html>

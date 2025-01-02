@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wisata Hutan Mangrove Ambeua, Kaledupa - Keindahan alam yang mempesona dan udara segar untuk dinikmati. Informasi wisata lengkap di sini!">
+    <title>Hutan Mangrove Ambeua, Kaledupa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: url('https://media.istockphoto.com/id/1430150685/id/foto/hutan-bakau-yang-lebat-dan-rimbun-di-rawa.jpg?s=612x612&w=0&k=20&c=3p9BkQ7M5BBBjqrA-A7_QFLSIRdIj_0t1FrhB1VbtUE=');
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 20px;
+            background: #f8f9fa;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        nav {
+            background: #1b4332;
+            text-align: center;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.suarakendari.com/wp-content/uploads/2022/04/FB_IMG_1649043637681.jpg');
+            height: 400px;
+            position: relative;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-size: 2.5rem;
+        }
+ 
+        .section {
+            margin-bottom: 2rem;
+            align-items: center;
+            text-align: center;
+        }
+        .section h2 {
+            margin-top: 80px;
+            margin-bottom: 60px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .facilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .facility-item {
+            background: #eef4ed;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .facility-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .facility-item img {
+            max-width: 100%;
+            height: 150px;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .facility-item h3 {
+            color: #2d6a4f;
+            margin-bottom: 0.5rem;
+        }
+
+        .activity, .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .activity-item, .testimonial {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .map {
+            width: 100%;
+            height: 300px;
+            margin-top: 1rem;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #1b4332;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #b9ff50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Kolom Komentar */
+        .comment-section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        .comment-section h3 {
+            margin-bottom: 15px;
+            color: #007acc;
+        }
+
+        .comment-section label {
+           display: block;
+           margin-bottom: 5px;
+           font-weight: bold;
+        }
+
+.comment-section input,
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.comment-section button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-section button:hover {
+    background-color: #005f99;
+}
+
+#comment-list {
+    margin-top: 20px;
+}
+
+#comment-list h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.comment-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e6f4f9;
+    border: 1px solid #cce6f0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+        @media (max-width: 768px) {
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1rem;
+        }
+        header .cta {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+        nav a {
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+        section h2 {
+            font-size: 1.8rem;
+        }
+        section p {
+            font-size: 0.9rem;
+            padding: 0 10px;
+        }
+        .gallery img {
+            width: 150px;
+            height: 120px;
+        }
+        .activities-container {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .activity-card {
+            width: 100%;
+        }
+        .activity-card img {
+            height: 150px;
+        }
+        .activity-card-content h3 {
+            font-size: 1.2rem;
+        }
+        .activity-card-content p {
+            font-size: 0.9rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Wisata Hutan Mangrove Ambeua</h1>
+        <p>Keindahan Alami di Pulau Kaledupa</p>
+    </header>
+    
+    <nav>
+        <a href="#tentang">Tentang</a>
+        <a href="#fasilitas">Fasilitas</a>
+        <a href="#aktivitas">Aktivitas</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#lokasi">Lokasi</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Keindahan Alami Hutan Mangrove</h1>
+    </div>
+
+    <div class="container">
+        <section id="tentang" class="section">
+            <h2>Tentang Hutan Mangrove Ambeua</h2>
+            <div class="parallax">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GHr8Wvhf_F8?si=ROgxuSLuoXuUGPrS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>Hutan Mangrove Ambeua terletak di Kaledupa, salah satu pulau di Wakatobi yang terkenal akan keindahan alamnya. Hutan mangrove ini menawarkan pengalaman wisata yang unik dengan jalur trekking, pemandangan menakjubkan, dan udara segar.</p>
+        </section>
+
+        <section id="fasilitas" class="section">
+            <h2>Fasilitas</h2>
+            <div class="facilities">
+                <div class="facility-item">
+                    <img src="https://suksesmina.wordpress.com/wp-content/uploads/2015/02/dsc03488.jpg" alt="Jalur Trekking">
+                    <h3>Jalur Trekking</h3>
+                    <p>Nikmati perjalanan menyusuri jalur mangrove yang rapi dan aman.</p>
+                </div>
+                <div class="facility-item">
+                    <img src="https://cdn.antaranews.com/cache/800x533/2017/02/20170213adadADAS.jpg" alt="Spot Foto">
+                    <h3>Spot Foto</h3>
+                    <p>Abadikan momen indah di tempat-tempat instagramable.</p>
+                </div>
+                <div class="facility-item">
+                    <img src="https://api2.kemenparekraf.go.id/storage/app/resources/PARIWISATA_5_Hutan_Mangrove_Indonesia_shutterstock_1504695710_akturer_image_29f97ae019.jpg" alt="Pemandu Wisata">
+                    <h3>Pemandu Wisata</h3>
+                    <p>Dapatkan informasi lengkap dari pemandu lokal yang ramah.</p>
+                </div>
+                <div class="facility-item">
+                    <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/akuratco/935888219526.jpg" alt="Area Piknik">
+                    <h3>Area Piknik</h3>
+                    <p>Bersantai di area piknik yang nyaman dengan pemandangan hutan mangrove.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="aktivitas" class="section">
+            <h2>Aktivitas</h2>
+            <div class="activity">
+                <div class="activity-item">
+                    <h3>Mendayung</h3>
+                    <p>Jelajahi jalur mangrove dengan sampan untuk pengalaman yang seru.</p>
+                </div>
+                <div class="activity-item">
+                    <h3>Fotografi</h3>
+                    <p>Abadikan momen indah di spot-spot terbaik di hutan mangrove.</p>
+                </div>
+                <div class="activity-item">
+                    <h3>Pengamatan Burung</h3>
+                    <p>Temukan berbagai spesies burung yang tinggal di area ini.</p>
+                </div>
+                <div class="activity-item">
+                    <h3>Belajar Ekosistem</h3>
+                    <p>Ikuti tur edukasi untuk memahami pentingnya ekosistem mangrove.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeri" class="section">
+            <h2>Galeri</h2>
+            <div class="gallery">
+                <img src="https://dlh.semarangkota.go.id/wp-content/uploads/2021/02/gpswisataindonesia.files_.wordpress-com.jpg" alt="Pemandangan Mangrove">
+                <img src="https://asset.kompas.com/crops/ZpnulGqEb55bp5GF-yaXxOr8nIQ=/0x0:1920x1280/1200x800/data/photo/2021/08/20/611f8fa4756fb.jpg" alt="Jalur Trekking">
+                <img src="https://www.mongabay.co.id/wp-content/uploads/2022/09/shutterstock_2148405319-scaled.jpeg" alt="Spot Foto">
+                <img src="https://mediatataruang.com/wp-content/uploads/2020/11/menanam-mangruv-tami.jpg" alt="Pengunjung di Area Piknik">
+            </div>
+        </section>
+
+        <section id="lokasi" class="section">
+            <h2>Lokasi</h2>
+            <p>Hutan Mangrove Ambeua terletak di Desa Ambeua, Pulau Kaledupa, Kabupaten Wakatobi. Anda dapat mencapai lokasi ini dengan perahu dari Wangi-Wangi ke Kaledupa.</p>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15937.890934094543!2d123.7856542!3d-5.4795247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbed7bb908fbc67%3A0xeca9f4318bcf9a49!2sAmbeua%2C%20Kaledupa!5e0!3m2!1sen!2sid!4v1692832928382!5m2!1sen!2sid" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <section class="comment-section">
+            <h3>Kolom Komentar</h3>
+            <form id="comment-form">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                
+                <label for="comment">Komentar:</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Tulis komentar Anda di sini" required></textarea>
+                
+                <button type="submit">Kirim Komentar</button>
+            </form>
+            <div id="comment-list">
+                <h4>Komentar Pengunjung:</h4>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Wisata Hutan Mangrove Ambeua. All Rights Reserved.</p>
+        <p>Temukan kami di <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </footer>
+    <script>
+        // Fungsi untuk menangani pengiriman komentar
+    document.getElementById("comment-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    // Ambil nilai dari input
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+
+    // Buat elemen komentar baru
+    const commentItem = document.createElement("div");
+    commentItem.classList.add("comment-item");
+    commentItem.innerHTML = `<strong>${name}:</strong><p>${comment}</p>`;
+
+    // Tambahkan komentar ke daftar
+    const commentList = document.getElementById("comment-list");
+    commentList.appendChild(commentItem);
+
+    // Bersihkan form
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+
+    if (!name.trim() || !comment.trim()) {
+        alert("Nama dan komentar tidak boleh kosong!");
+        return;
+    }
+    
+});
+    </script>
+</body>
+</html>

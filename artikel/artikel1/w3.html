@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Parang Tradisional Binongko</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: url('https://osccdn.medcom.id/images/content/2020/02/04/d1538032995bd497e1f0ece80891abfe.jpg');
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+        }
+        header img {
+            width: 150px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+        .banner {
+            background: url('https://www.suarakendari.com/wp-content/uploads/2021/03/parang.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 100px;
+            position: relative;
+        }
+        .banner h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .banner p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .banner a {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .banner a:hover {
+            background-color: #0056b3;
+        }
+        section {
+            padding: 60px 0;
+        }
+        /*bagian blog & artikel*/
+#blog {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-content h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.blog-content p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    color: #555;
+}
+        .fas {
+            margin-right: 10px;
+            color: #007BFF;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        /* Parallax effect */
+.parallax {
+    background-image: url('tenun-background.jpg'); /* Background Image */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    color: white;
+    text-align: center;
+}
+        .container h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            color: #0073e6;
+            text-align: center;
+        }
+
+.attractions h2 {
+    color: #0073e6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.attractions p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #555;
+}
+
+.attraction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.attraction-item {
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.attraction-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.attraction-item h3 {
+    margin: 16px 0 8px;
+    font-size: 20px;
+    color: #003366;
+}
+
+.attraction-item p {
+    padding: 0 16px 16px;
+    font-size: 16px;
+    color: #666;
+}
+
+.attraction-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+        .testimonial {
+            margin-bottom: 40px;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .form-control input, .form-control textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        .form-control input:focus, .form-control textarea:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Kolom Komentar */
+        .comment-section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        .comment-section h3 {
+            margin-bottom: 15px;
+            color: #007acc;
+        }
+
+        .comment-section label {
+           display: block;
+           margin-bottom: 5px;
+           font-weight: bold;
+        }
+
+.comment-section input,
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.comment-section button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-section button:hover {
+    background-color: #005f99;
+}
+
+#comment-list {
+    margin-top: 20px;
+}
+
+#comment-list h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.comment-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e6f4f9;
+    border: 1px solid #cce6f0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer p {
+            margin: 0.5rem 0;
+        }
+        footer a {
+            color: #2dae4d;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        footer a:hover {
+            color: #abe7c2;
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+        }
+        .scroll-top:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#blog">Proses Pembuatan</a></li>
+                    <li><a href="#attractions">Atraksi Wisata</a></li>
+                    <li><a href="#contact">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="banner">
+        <h1>Eksplorasi Pembuatan Parang Tradisional Binongko</h1>
+        <p>Menelusuri budaya dan keahlian unik dalam pembuatan parang Binongko yang legendaris.</p>
+        <a href="#about">Mulai Petualangan</a>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Tentang Parang Binongko</h2>
+            <div class="parallax">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LzukSFKZ2Q8?si=5JBT6Gm6AU7Q_9RC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>Parang Binongko adalah alat tradisional yang menjadi simbol budaya masyarakat Binongko. Pembuatan parang ini melibatkan teknik pandai besi yang diwariskan secara turun-temurun, menghasilkan senjata yang tidak hanya berfungsi tetapi juga bernilai budaya tinggi.</p>
+            <p>Pembuatan parang di Pulau Binongko telah dimulai sejak zaman Kerajaan Buton. Para pandai besi di Binongko dikenal sebagai pengrajin ulung yang mampu memanfaatkan logam bekas seperti baja kapal untuk menciptakan parang yang tajam dan tahan lama. Keahlian ini terus diwariskan, menjadikan Binongko sebagai pusat pembuatan parang tradisional di wilayah Wakatobi.</p>
+        </div>
+    </section>
+
+    <section id="blog">
+        <section class="container">
+            <h2>Proses Pembuatan</h2>
+            <p>Ada tiga tahap utama dalam pembuatan parang tradisional Binongko, yaitu:</p>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="https://zonasultra.id/wp-content/uploads/2020/11/pandaibesi3.jpg" alt="Tenun Sultra">
+                    <div class="blog-content">
+                        <h3>Langkah 1 : Persiapan</h3>
+                        <p>Pemilihan bahan logam, pemanasan, dan pemotongan menjadi bentuk dasar.</p>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <img src="https://destinasian.co.id/id/wp/wp-content/uploads/21-1.jpg" alt="Karnaval Sultra">
+                    <div class="blog-content">
+                        <h3>Langkah 2 : Penempaan</h3>
+                        <p>Baja dipanaskan hingga merah membara dan ditempa untuk membentuk bilah parang.</p>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <img src="https://osccdn.medcom.id/images/content/2020/02/04/d1538032995bd497e1f0ece80891abfe.jpg" alt="Workshop Tenun">
+                    <div class="blog-content">
+                        <h3>Langkah 3 : Finishing</h3>
+                        <p>Pengasahan untuk mendapatkan ketajaman sempurna dan pemasangan pegangan.</p>
+                    </div>
+                </article>
+            </div>
+    </section>
+
+    <section class="attractions">
+        <div class="container">
+            <h2>Atraksi Wisata di Binongko</h2>
+            <p>Jelajahi berbagai atraksi wisata menarik yang ditawarkan oleh Binongko, mulai dari budaya hingga keindahan alam yang memukau.</p>
+            <div class="attraction-grid">
+                <div class="attraction-item">
+                    <img src="https://media.telisik.id/assets/img/news/2021/08/desa_wisata_palahidu_barat_binongko_tawarkan_atraksi_wisata_unik.jpg" alt="Pembuatan Parang Tradisional">
+                    <h3>Pembuatan Parang Tradisional</h3>
+                    <p>Ikuti proses pembuatan parang khas Binongko secara langsung dan pelajari tradisinya.</p>
+                </div>
+                <div class="attraction-item">
+                    <img src="https://telisik.id/assets/img/news/files/IMG-20210808-WA0009.jpg" alt="Pantai Binongko">
+                    <h3>Pantai Binongko</h3>
+                    <p>Nikmati pasir putih dan air laut yang jernih di pantai-pantai indah sekitar Binongko.</p>
+                </div>
+                <div class="attraction-item">
+                    <img src="https://media.telisik.id/assets/img/news/2022/12/4_wisata_puncak_di_sulawesi_tenggara_wajib_dikunjungi_libur_tahun_baru.jpg" alt="Sunset Binongko">
+                    <h3>Sunset di Bukit</h3>
+                    <p>Temukan momen magis saat matahari terbenam dari bukit di Binongko.</p>
+                </div>
+                <div class="attraction-item">
+                    <img src="https://telisik.id/assets/img/news/files/20210518_171812_compress54.jpg" alt="Budaya Binongko">
+                    <h3>Festival Budaya</h3>
+                    <p>Rasakan kehangatan masyarakat Binongko melalui festival budaya yang penuh warna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Galeri</h2>
+            <div class="gallery">
+                <img src="https://asset-2.tstatic.net/aceh/foto/bank/images/pandai-besi-mengetok-baja.jpg" alt="Parang Tradisional Binongko 1">
+                <img src="https://destinasian.co.id/id/wp/wp-content/uploads/5-70.jpg" alt="Parang Tradisional Binongko 2">
+                <img src="https://destinasian.co.id/id/wp/wp-content/uploads/20-1.jpg" alt="Parang Tradisional Binongko 3">
+                <img src="https://i.ytimg.com/vi/c2VB2whlTO4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBGoVftpSgDTKzKsXrUzYvW9IV3Tw" alt="Parang Tradisional Binongko 4">
+                <img src="https://zonasultra.id/wp-content/uploads/2020/11/pandaibesi2.jpg" alt="Parang Tradisional Binongko 5">
+                <img src="https://zonasultra.id/wp-content/uploads/2020/11/pandaibesi.jpg" alt="Parang Tradisional Binongko 6">
+                <img src="https://asset-2.tstatic.net/sultra/foto/bank/images/foto-pantai-one-melangka-kecamatan-binongko-kabupaten-wakatobi-sulawesi-tenggara.jpg" alt="Parang Tradisional Binongko 7">
+                <img src="https://pbs.twimg.com/media/EJj1C2sVUAAfP2o.jpg" alt="Parang Tradisional Binongko 8">
+            </div>
+        </div>
+    </section>
+
+    <section class="comment-section">
+        <h3>Kolom Komentar</h3>
+        <form id="comment-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+            
+            <label for="comment">Komentar:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Tulis komentar Anda di sini" required></textarea>
+            
+            <button type="submit">Kirim Komentar</button>
+        </form>
+        <div id="comment-list">
+            <h4>Komentar Pengunjung:</h4>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Parang Binongko. Semua Hak Dilindungi.</p>
+              <p>Ikuti kami : <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+        </div>
+    </footer>
+
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Scroll-to-Top Button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Show/Hide Scroll-to-Top Button
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+        // Fungsi untuk menangani pengiriman komentar
+document.getElementById("comment-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    // Ambil nilai dari input
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+
+    // Buat elemen komentar baru
+    const commentItem = document.createElement("div");
+    commentItem.classList.add("comment-item");
+    commentItem.innerHTML = `<strong>${name}:</strong><p>${comment}</p>`;
+
+    // Tambahkan komentar ke daftar
+    const commentList = document.getElementById("comment-list");
+    commentList.appendChild(commentItem);
+
+    // Bersihkan form
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+
+    if (!name.trim() || !comment.trim()) {
+        alert("Nama dan komentar tidak boleh kosong!");
+        return;
+    }
+    
+});
+    </script>
+
+</body>
+</html>

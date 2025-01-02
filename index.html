@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beragam Wisata di Wakatobi</title>
+    <link rel="stylesheet" href="wis.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img class="logo" src="img/image.png" alt="logo" /></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#Event">Event</a></li>
+                <li><a href="Destinasi">Destinasi</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button onclick="search()">Search</button>
+        </div>
+    </header>
+    
+    <div class="slider">
+    <div class="slides">
+      <div class="slide" onclick="handleClick(1)">
+        <img src="img/imgs1.png" alt="image 1">
+      </div>
+      
+      <div class="slide" onclick="handleClick(2)">
+        <img src="img/imgs2.png" alt="Image 2">
+      </div>
+      
+      <div class="slide" onclick="handleClick(3)">
+        <img src="img/imgs3.png" alt="Image 3"> 
+      </div>
+      
+      <div class="slide" onclick="handleClick(4)">
+        <img src="img/imgs4.png" alt="Image 3">
+      </div>
+      <!-- More slides as needed -->
+    </div>
+
+    <div class="indicators">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <!-- More dots as needed -->
+    </div>
+  </div>
+    
+    <main>
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="container">
+        <h1>Jadwal Event Wisata Menarik Tahun 2025</h1>
+
+        <!-- Event Wisata -->
+        <div class="event-container" id="Event">
+            <div class="event-card">
+                <img src="img/img6.png" alt="STK" class="event-img">
+                <div class="event-details">
+                    <h2>Sultra Tenun Karnaval (STK)</h2>
+                    <p class="event-description">Nikmati dan ikut serta dalam kegiatan tahunan pemerintah provinsi yang melibatkan para penenun dan desainer lokal.</p>
+                    <p class="event-time">Tanggal: 15 Maret 2024, 06:00 WITA</p>
+                    <a href="artikel/artikel1/j1.html" class="cta-btn">Selengkapnya</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="img/img4.png" alt="Wakatobi Wave" class="event-img">
+                <div class="event-details">
+                    <h2>Wakatobi Wave</h2>
+                    <p class="event-description">event budaya tahunan yang menampilkan keindahan kuliner dan budaya lokal. </p>
+                    <p class="event-time">Tanggal: 14 september 2024, 08:00 WITA</p>
+                    <a href="artikel/artikel1/j2.html" class="cta-btn">Selengkapnya</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="img/img3.png" alt="Wowine" class="event-img">
+                <div class="event-details">
+                    <h2>Festival Wowine</h2>
+                    <p class="event-description">Nikmati kekayaan buadaya pada Festival desngan tema "Harmoni Perempuan Maritim". </p>
+                    <p class="event-time">Tanggal: 23-25 Agustus 2024, 10:00 WITA</p>
+                    <a href="artikel/artikel1/j3.html" class="cta-btn">Selengkapnya</a>
+                </div>
+            </div>
+
+            <!-- Tambahkan event lainnya -->
+        </div>
+    </div>
+
+        <section class= "web">
+          <h2>Destinasi Wisata</h2>
+          <p>Beberapa destinasi wisata yang bisa anda kunjungi di Kabupaten Wakatobi.</p>
+        </section>
+        <section class="wisata">
+             <div class="gallery">
+        <figure>
+            <figcaption>1. Pantai Sombu</figcaption>
+            <a href="artikel/artikel1/w1.html"><img src="img/imgg1.png" alt="1. Pantai Sombu"></a>
+        </figure>
+        <figure>
+            <figcaption>2. Goa KOntamale</figcaption>
+            <a href="artikel/artikel1/w2.html"><img src="img/imgg2.png" alt="2. Goa KOntamale"></a>
+        </figure>
+        <figure>
+            <figcaption>3. Pembuatan Parang Tradisional</figcaption>
+            <a href="artikel/artikel1/w3.html"><img src="img/imgg3.png" alt="3. Benteng Tindoi"></a>
+        </figure>
+        <figure>
+            <figcaption>4. Benteng Liya togo</figcaption>
+            <a href="artikel/artikel1/w4.html"><img src="img/imgg4.png" alt="4. Benteng Liya"></a>
+        </figure>
+        <figure>
+            <figcaption>5. Desa Bajo Sampela</figcaption>
+            <a href="artikel/artikel1/w5.html"><img src="img/imgg5.png" alt="5. Desa Bajo Mola"></a>
+        </figure>
+        <figure>
+            <figcaption>6. Pantai Hoga</figcaption>
+            <a href="artikel/artikel1/w6.html"><img src="img/imgg6.png" alt="6. Pantai Hoga"></a>
+        </figure>
+        <figure>
+            <figcaption>7. Mangrove di Ambeua</figcaption>
+            <a href="artikel/artikel1/w7.html"><img src="img/imgg7.png" alt="7. Mangrove di Ambeua"></a>
+        </figure>
+        <figure>
+            <figcaption>8. Benteng Ollo</figcaption>
+            <a href="artikel/artikel1/w8.html"><img src="img/imgg8.png" alt="8. Benteng Ollo"></a>
+        </figure>
+        <figure>
+            <figcaption>9. Puncak Kahyangan</figcaption>
+            <a href="artikel/artikel1/w9.html"><img src="img/imgg9.png" alt="9. Puncak Kahyangan"></a>
+        </figure>
+        <figure>
+            <figcaption>10. Spot Diving Binongko</figcaption>
+            <a href="artikel/artikel1/w10.html"><img src="img/imgg10.png" alt="10. Pantai Lakota"></a>
+        </figure>
+        <figure>
+            <figcaption>11. Pulau Sawa</figcaption>
+            <a href="artikel/artikel1/w11.html"><img src="https://asset.kompas.com/crops/EEsZN5AUP7yz8y_p5pfTwiSzJ1w=/242x0:1262x680/750x500/data/photo/2024/06/14/666bd4f448a5d.jpg" alt="11. Wreck Dive"></a>
+        </figure>
+        <figure>
+            <figcaption>12. Pantai Palahidu</figcaption>
+            <a href="artikel/artikel1/w12.html"><img src="img/imgg12.png" alt="12. Pantai Palahidu"></a>
+        </figure>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <h3> WEBSITE WISATA WAKATOBI</h3>
+            <p>Website ini di buat Oleh Kelompok 1, Jurusan TI A.3. Kami menyediakan layanan terbaik sekitar informasi wisata di Wakatobi.</p>
+        </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Kontak Kami</h3>
+                <p>Email: info@Kelompok1.com</p>
+                <p>Telepon: (021) 12345678</p>
+                <p>Alamat: Jl. Kapitan Woloindi No. 5, Wakatobi</p>
+            </div>
+            <div class="footer-section">
+                <h3>Link Penting</h3>
+                <p><a href="#" style="color: white;">Kebijakan Privasi</a></p>
+                <p><a href="#" style="color: white;">Syarat dan Ketentuan</a></p>
+                <p><a href="#" style="color: white;">Tentang Kami</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Ikuti Kami</h3>
+                <div class="social-icons">
+                <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="Twitter"></a>
+                <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/3116/3116491.png" alt="TikTok"></a>
+                <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" alt="YouTube"></a>
+                </div>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Daftar Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Masukkan email Anda" required>
+                    <input type="submit" value="Daftar">
+                </form>
+            </div>
+        </div>
+        <p>&copy; 2024 Tugas Web Kelompok WEB. Jurusan Teknologi Informasi ITBM Wakatobi.</p>
+    </footer>
+
+    <script src="A .js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Desa Bajo Mola</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fcff;
+            color: #333;
+        }
+        header {
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfcxRbBF84vt75aV3McGXGCYajRdCuYyXf4g&s');
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #5e8680;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #caf0f8;
+        }
+        .hero {
+            background: url('https://www.masterplandesa.com/wp-content/uploads/2024/04/Masyarakat-Pesisir-Kabupaten-Wakatobi.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            margin: 0;
+        }
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        .section img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 45%;
+        }
+        .section div {
+            flex: 1 1 45%;
+        }
+        .section h2 {
+            color: #0077b6;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+        .section p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .activities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .activity-card {
+            background-color: #e0f7fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            flex: 1 1 calc(33% - 20px);
+            max-width: 300px;
+        }
+        .activity-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .activity-card h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        /* Kolom Komentar */
+        .comment-section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        .comment-section h3 {
+            margin-bottom: 15px;
+            color: #007acc;
+        }
+
+        .comment-section label {
+           display: block;
+           margin-bottom: 5px;
+           font-weight: bold;
+        }
+
+.comment-section input,
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.comment-section button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-section button:hover {
+    background-color: #005f99;
+}
+
+#comment-list {
+    margin-top: 20px;
+}
+
+#comment-list h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.comment-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e6f4f9;
+    border: 1px solid #cce6f0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+        footer {
+            background-color: #0077b6;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
+        footer .footer-section {
+            flex: 1 1 30%;
+        }
+        footer h4 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        footer p {
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        footer a {
+            color: #caf0f8;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #90e0ef;
+        }
+        footer .social-icons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        footer .social-icons a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #90e0ef;
+        }
+        @media (max-width: 768px) {
+            footer .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            footer .footer-section {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Desa Bajo Sampela</h1>
+        <p>Surga Tersembunyi di Kepulauan Wakatobi</p>
+    </header>
+    <nav>
+        <a href="#tentang">Tentang</a>
+        <a href="#keindahan">Keindahan</a>
+        <a href="#budaya">Budaya</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#aktivitas">Aktivitas</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="hero">
+        <h1>Selamat Datang di Desa Bajo Sampela</h1>
+    </div>
+    <div class="container">
+        <div class="section" id="tentang">
+            <div>
+                <h2>Tentang Desa Bajo Sampela</h2>
+                <p>Desa Bajo Mola terletak di Kepulauan Wakatobi, Sulawesi Tenggara. Desa ini dihuni oleh masyarakat Suku Bajo, yang dikenal sebagai "pengembara laut". Dengan tradisi hidup di atas air, desa ini menawarkan pengalaman unik yang tidak ditemukan di tempat lain.</p>
+            </div>
+            <div class="parallax">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CAjIrQWK5Jk?si=dhTzen64i-ICPwFr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="section" id="keindahan">
+            <img src="https://img.antarafoto.com/cache/800x533/2023/02/24/suku-bajo-sea-gypsy-yang-hidup-harmoni-dengan-laut-1il-fea.jpg" alt="Keindahan Desa Bajo Mola">
+            <div>
+                <h2>Keindahan Alam</h2>
+                <p>Desa ini dikelilingi oleh laut biru jernih, terumbu karang yang memukau, dan pantai yang indah. Wisatawan dapat menikmati snorkeling, diving, atau hanya bersantai di atas perahu tradisional masyarakat Bajo.</p>
+            </div>
+        </div>
+        <div class="section" id="budaya">
+            <div>
+                <h2>Budaya Lokal</h2>
+                <p>Suku Bajo memiliki tradisi yang kaya, mulai dari musik, tarian, hingga kerajinan tangan. Wisatawan dapat belajar tentang kehidupan sehari-hari masyarakat Bajo, termasuk cara mereka membuat perahu tradisional dan menangkap ikan.</p>
+            </div>
+            <img src="https://cdn0-production-images-kly.akamaized.net/ANsK9lKhmXXQ05V2P7TNzZYl0RE=/1200x900/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/1587293/original/097158800_1494180446-perahu_naga.jpg" alt="Budaya Lokal Desa Bajo Mola">
+        </div>
+        <div class="section" id="galeri">
+            <h2>Galeri</h2>
+            <div class="gallery">
+                <img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/04/24/20_25_37_Kampung_Bojo_Mola_gprioritycoidwidth-800format-webp-1261141197.jpg" alt="Galeri 1">
+                <img src="https://catperku.com/wp-content/uploads/2023/11/Orang-Bajo-di-Kampung-Bajo-Mola-jpg.webp" alt="Galeri 2">
+                <img src="https://satyawinnie.com/wp-content/uploads/2013/08/Tambak-Ikan-1024x640.jpg" alt="Galeri 3">
+                <img src="https://img.antarafoto.com/cache/800x533/2023/02/24/suku-bajo-sea-gypsy-yang-hidup-harmoni-dengan-laut-p4-1il-fea.jpg" alt="Galeri 4">
+                <img src="https://static.tripzilla.id/media/30334/conversions/wisata-wakatobi-1-1024x768-w768.webp" alt="Galeri 5">
+                <img src="https://static.republika.co.id/uploads/images/inpicture_slide/wakatobi-_151102190632-854.jpg" alt="Galeri 6">
+                <img src="https://c1.staticflickr.com/5/4917/32015645738_642a3aac3c_b.jpg" alt="Galeri 6">
+                <img src="https://c8.alamy.com/compde/bdb6b6/indonesien-sulawesi-wakatobi-national-park-kaledupa-insel-sampela-bajo-meer-zigeuner-dorfhauser-bdb6b6.jpg" alt="Galeri 6">
+                <img src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/ykan/community-empowerment/Kampung-Bajo-Mola.JPG?crop=0%2C306%2C3905%2C2050&wid=1200&hei=630&scl=3.254166666666667" alt="Galeri 6">
+                <img src="https://lombafotoastra.satu-indonesia.com/2018/images/photo_slide/1e15986eb6436680937ecf73b5c83684_slide.jpg" alt="Galeri 6">
+            </div>
+        </div>
+        <div class="section" id="aktivitas">
+            <h2>Aktivitas</h2>
+            <div class="activities">
+                <div class="activity-card">
+                    <img src="https://www.wiranurmansyah.com/wp-content/uploads/2014/12/WIR40738-720x540.jpg" alt="Snorkeling">
+                    <h3>Snorkeling</h3>
+                    <p>Jelajahi keindahan bawah laut Desa Bajo Sampela dengan snorkeling.</p>
+                </div>
+                <div class="activity-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzSl-ON1sjTK6y08cGp-n4a3kyodDL9hQxmA&s" alt="Diving">
+                    <h3>Diving</h3>
+                    <p>Temukan keajaiban terumbu karang dengan menyelam di laut biru jernih.</p>
+                </div>
+                <div class="activity-card">
+                    <img src="https://i.ytimg.com/vi/_rBwXPC-3GI/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGD8gXChyMA8=&rs=AOn4CLDYZWAoiN77CV-EpUiEJgxlUP3AxA" alt="Memancing">
+                    <h3>Memancing</h3>
+                    <p>Ikuti aktivitas memancing tradisional bersama nelayan lokal.</p>
+                </div>
+            </div>
+        </div>
+        <section class="comment-section">
+            <h3>Kolom Komentar</h3>
+            <form id="comment-form">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                
+                <label for="comment">Komentar:</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Tulis komentar Anda di sini" required></textarea>
+                
+                <button type="submit">Kirim Komentar</button>
+            </form>
+            <div id="comment-list">
+                <h4>Komentar Pengunjung:</h4>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Tentang Kami</h4>
+                <p>Desa Bajo Sampela adalah tujuan wisata yang menawarkan keindahan alam dan budaya yang unik di Indonesia.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <p>Email: info@desabajomola.com</p>
+                <p>Telepon: +62 812 3456 7890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Ikuti Kami</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 Desa Bajo Sampela. Semua Hak Dilindungi.</p>
+    </footer>
+    <script>
+        // Fungsi untuk menangani pengiriman komentar
+    document.getElementById("comment-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    // Ambil nilai dari input
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+
+    // Buat elemen komentar baru
+    const commentItem = document.createElement("div");
+    commentItem.classList.add("comment-item");
+    commentItem.innerHTML = `<strong>${name}:</strong><p>${comment}</p>`;
+
+    // Tambahkan komentar ke daftar
+    const commentList = document.getElementById("comment-list");
+    commentList.appendChild(commentItem);
+
+    // Bersihkan form
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+
+    if (!name.trim() || !comment.trim()) {
+        alert("Nama dan komentar tidak boleh kosong!");
+        return;
+    }
+    
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Desa Bajo Mola</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fcff;
+            color: #333;
+        }
+        header {
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfcxRbBF84vt75aV3McGXGCYajRdCuYyXf4g&s');
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #5e8680;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #caf0f8;
+        }
+        .hero {
+            background: url('https://asset.kompas.com/crops/EEsZN5AUP7yz8y_p5pfTwiSzJ1w=/242x0:1262x680/750x500/data/photo/2024/06/14/666bd4f448a5d.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            margin: 0;
+        }
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        .section img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 45%;
+        }
+        .section div {
+            flex: 1 1 45%;
+        }
+        .section h2 {
+            color: #0077b6;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+        .section p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .activities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .activity-card {
+            background-color: #e0f7fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            flex: 1 1 calc(33% - 20px);
+            max-width: 300px;
+        }
+        .activity-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .activity-card h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        /* Kolom Komentar */
+        .comment-section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        .comment-section h3 {
+            margin-bottom: 15px;
+            color: #007acc;
+        }
+
+        .comment-section label {
+           display: block;
+           margin-bottom: 5px;
+           font-weight: bold;
+        }
+
+.comment-section input,
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.comment-section button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-section button:hover {
+    background-color: #005f99;
+}
+
+#comment-list {
+    margin-top: 20px;
+}
+
+#comment-list h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.comment-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e6f4f9;
+    border: 1px solid #cce6f0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+        footer {
+            background-color: #0077b6;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        footer .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
+        footer .footer-section {
+            flex: 1 1 30%;
+        }
+        footer h4 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        footer p {
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        footer a {
+            color: #caf0f8;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #90e0ef;
+        }
+        footer .social-icons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        footer .social-icons a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #90e0ef;
+        }
+        @media (max-width: 768px) {
+            footer .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            footer .footer-section {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pulau Sawa</h1>
+        <p>Surga Tersembunyi di pulau tomia</p>
+    </header>
+    <nav>
+        <a href="#tentang">Tentang</a>
+        <a href="#keindahan">Keindahan</a>
+        <a href="#budaya">Budaya</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#aktivitas">Aktivitas</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="hero">
+        <h1>✨Selamat Datang di Pulau Sawa✨</h1>
+    </div>
+    <div class="container">
+        <div class="section" id="tentang">
+            <div>
+                <h2>🌴Tentang Pulau Sawa</h2>
+                <p>Pulau Sawa adalah ialah salah satu destinasi wisata yang ada di Kecamatan Tomia, Wakatobi. Lokasinya yang dekat dengan Wakatobi Dive Resort turut menyuguhkan pemandangan alam, ditambah hamparan pasir putih dan deretan pohon kelapa. Air di Puau Sawa pun juga jernih sehingga wisatawan dapat melihat dengan jelas pemandangan terumbu karang saat snorkeling dan diving.</p>
+            </div>
+            <div class="parallax">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kOCOcZZO8lE?si=EBlchBDBhS-hfxfL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="section" id="keindahan">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7CIS4MdlYEXqC54_i7ggaUUtFHesk0AArMvFMAJiNNDGw3qQaV5kfl4DdNRXCvlreCp6t2fik4Dexw3iFJSMlSfaYh_eBCbPCoWWvc5KcADVonbEmsnPY_PLThhBkh5kas3LCk2BSAvL5/s889/kampung-sawa-tomia.jpg" alt="Keindahan Desa Bajo Mola">
+            <div>
+                <h2>Keindahan Alam</h2>
+                <p>Pulau Sawa memiliki perairan yang indah dan disaat yang bersamaan memiliki arus yang tenang sehingga memang cocok untuk kalian gunakan untuk melakukan aktivitas renang. Rasanya tidak ada yang mampu menolak godaan untuk menceburkan diri mereka di perairan Pulau Sawa yang sangat indah ini, apalagi kalian mengunjunginya bersama dengan teman-teman kalian yang akan membuat aktivitas tersebut menjadi lebih menyenangkan.</p>
+            </div>
+        </div>
+        <div class="section" id="budaya">
+            <div>
+                <h2>Fasilitas Di Pulau Sawa</h2>
+                <p>Tidak ada banyak fasilitas yang dapat kalian gunakan saat sedang berada di Pulau Sawa ini mengingat jika pulau yang satu ini merupakan pulau tidak berpenghuni, satu – satunya fasilitas yang bisa kalian gunakan adalah perahu motor. Perahu motor ini dapat kalian gunakan untuk menyebrang menuju ke Pulau Sawa dan tentu saja untuk meninggalkan Pulau Sawa juga.</p>
+            </div>
+            <img src="https://asset.kompas.com/crops/EEsZN5AUP7yz8y_p5pfTwiSzJ1w=/242x0:1262x680/750x500/data/photo/2024/06/14/666bd4f448a5d.jpg" alt="Budaya Lokal Desa Bajo Mola">
+        </div>
+        <div class="section" id="galeri">
+            <h2>Galeri</h2>
+            <div class="gallery">
+                <img src="https://picture.triptrus.com/image/2018/04/pantai-koguna.jpeg" alt="Galeri 1">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/6d/33/49/sawa-island.jpg" alt="Galeri 2">
+                <img src="https://cdn-2.tstatic.net/pekanbaru/foto/bank/images/area-pantai-wisata-di-Lingga-Pulau-Benan-Kecamatan-Katang-Bidare.jpg" alt="Galeri 3">
+                <img src="https://asset.kompas.com/crops/W3ryZwcX78e7DCBM1paYzfDME0c=/79x0:1099x680/1200x800/data/photo/2024/06/14/666bd5b9aed57.jpg" alt="Galeri 4">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7CIS4MdlYEXqC54_i7ggaUUtFHesk0AArMvFMAJiNNDGw3qQaV5kfl4DdNRXCvlreCp6t2fik4Dexw3iFJSMlSfaYh_eBCbPCoWWvc5KcADVonbEmsnPY_PLThhBkh5kas3LCk2BSAvL5/s889/kampung-sawa-tomia.jpg" alt="Galeri 5">
+                <img src="https://cdn.antaranews.com/cache/1200x800/2024/05/06/Wisata-tomia-wakatobi-060524-jjn-1.jpg" alt="Galeri 6">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipMh1PKz-UW5i2CfftdlSLHGKfAm9_9Q_XW7LDz_=s0" alt="Galeri 6">
+                <img src="https://picture.triptrus.com/picture/l2635" alt="Galeri 6">
+                <img src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/photo/jawapos/2023/01/pulau-tomia.png" alt="Galeri 6">
+                <img src="https://www.suarakendari.com/wp-content/uploads/2021/04/wakatobi3-300x225.jpg" alt="Galeri 6">
+            </div>
+        </div>
+        <div class="section" id="aktivitas">
+            <h2>Aktivitas</h2>
+            <div class="activities">
+                <div class="activity-card">
+                    <img src="https://telisik.id/assets/img/news/2021/06/4_alasan_kamu_wajib_berwisata_ke_pulau_sawa_wakatobi.jpg" alt="Snorkeling">
+                    <h3>Snorkeling</h3>
+                    <p>Kalian akan menjumpai berbagai macam biota laut yang indah seperti terumbu karang hingga ikan warna-warni dengan berbagai macam ukuran.</p>
+                </div>
+                <div class="activity-card">
+                    <img src="https://picture.triptrus.com/image/2014/06/pulau-wangi-wangi-2.jpeg" alt="Diving">
+                    <h3>Berenang Dan Bermain Di Pasir</h3>
+                    <p>Tidak hanya perairannya saja, kalian juga dapat melakukan berbagai aktivitas menarik di pesisir pantainya mulai dari melakukan olahraga ringan, membangun istana pasir atau sekedar berjemur saja.</p>
+                </div>
+                <div class="activity-card">
+                    <img src="https://images.trvl-media.com/lodging/20000000/19380000/19371000/19370983/306cac5a.jpg?impolicy=fcrop&w=357&h=201&p=1&q=medium" alt="Memancing">
+                    <h3>Memancing</h3>
+                    <p>Memancing memang aktivitas menyenangkan terutama bagi kalian yang suka dengan ketenangan dan memang cocok jika kalian melakukannya di Pulau Sawa.</p>
+                </div>
+            </div>
+        </div>
+        <section class="comment-section">
+            <h3>Kolom Komentar</h3>
+            <form id="comment-form">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                
+                <label for="comment">Komentar:</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Tulis komentar Anda di sini" required></textarea>
+                
+                <button type="submit">Kirim Komentar</button>
+            </form>
+            <div id="comment-list">
+                <h4>Komentar Pengunjung:</h4>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Tentang Kami</h4>
+                <p>Desa Bajo Sampela adalah tujuan wisata yang menawarkan keindahan alam dan budaya yang unik di Indonesia.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <p>Email: info@desabajomola.com</p>
+                <p>Telepon: +62 812 3456 7890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Ikuti Kami</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 Desa Bajo Sampela. Semua Hak Dilindungi.</p>
+    </footer>
+    <script>
+        // Fungsi untuk menangani pengiriman komentar
+    document.getElementById("comment-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    // Ambil nilai dari input
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+
+    // Buat elemen komentar baru
+    const commentItem = document.createElement("div");
+    commentItem.classList.add("comment-item");
+    commentItem.innerHTML = `<strong>${name}:</strong><p>${comment}</p>`;
+
+    // Tambahkan komentar ke daftar
+    const commentList = document.getElementById("comment-list");
+    commentList.appendChild(commentItem);
+
+    // Bersihkan form
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+
+    if (!name.trim() || !comment.trim()) {
+        alert("Nama dan komentar tidak boleh kosong!");
+        return;
+    }
+    
+});
+    </script>
+</body>
+</html>

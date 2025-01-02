@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa Kontamale</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+            color: #333;
+        }
+        header {
+            background: url('https://i0.wp.com/jadiguna.com/wp-content/uploads/2016/11/jpvja1609170001s.jpg?w=317&h=211&ssl=1') ;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            color: #FFD700;
+            transform: scale(1.1);
+        }
+        .hero {
+            background: url('https://cdn1-production-images-kly.akamaized.net/ZoagnFKkZfLekK_05DRYkb1hinM=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1432607/original/087039500_1481449884-Masjid_Agung_Bente__Wisata_Sejarah_dan_Reliji_Wakatobi_1.jpg') no-repeat center center/cover;
+            height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 3px 3px 8px #000;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .hero h2 {
+            z-index: 1;
+            font-size: 3rem;
+            animation: fadeIn 2s;
+        }
+        .section {
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            color: #4CAF50;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+            width: 300px;
+            height: 200px;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+        .article {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .article-content {
+            padding: 1.5rem;
+        }
+        .article-content h3 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+        .article-content p {
+            color: #666;
+            margin: 0.5rem 0 1rem;
+        }
+        .article-content a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .article-content a:hover {
+            color: #81C784;
+        }
+        .articles .btn {
+            text-decoration: none;
+            color: white;
+            background-color:  rgb(171, 252, 96);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+        .articles .btn:hover {
+            background-color:  #FFD700;
+        }
+        /* Kolom Komentar */
+        .comment-section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        .comment-section h3 {
+            margin-bottom: 15px;
+            color: #007acc;
+        }
+
+        .comment-section label {
+           display: block;
+           margin-bottom: 5px;
+           font-weight: bold;
+        }
+
+.comment-section input,
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.comment-section button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-section button:hover {
+    background-color: #005f99;
+}
+
+#comment-list {
+    margin-top: 20px;
+}
+
+#comment-list h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.comment-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e6f4f9;
+    border: 1px solid #cce6f0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+            margin-top: 3rem;
+        }
+        footer p {
+            margin: 0.5rem 0;
+        }
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Benteng Ollo</h1>
+        <nav>
+            <a href="#about">Tentang</a>
+            <a href="#attractions">Daya Tarik</a>
+            <a href="#gallery">Galeri</a>
+            <a href="#articles">Artikel</a>
+            <a href="#location">Lokasi</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Pesona Alami Benteng Ollo</h2>
+    </div>
+
+    <section id="about" class="section">
+        <h2>Benteng Ollo</h2>
+        <div class="parallax">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FZp9PCFsuXM?si=wK6m7CFbspyTk-z2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p><strong>Benteng Ollo</strong> adalah salah satu peninggalan sejarah yang terletak di Sulawesi Selatan. Benteng ini dibangun pada masa penjajahan dan memiliki peran penting dalam melindungi wilayah dari serangan musuh. Lokasinya yang strategis menjadikannya salah satu situs bersejarah yang banyak dikunjungi wisatawan.</p>
+        <p>Benteng ini memiliki arsitektur khas dengan dinding-dinding tebal yang terbuat dari batu. Saat ini, Benteng Ollo menjadi salah satu destinasi wisata budaya dan sejarah yang menawarkan pemandangan indah serta nilai sejarah yang mendalam.</p>
+        <p>Selain sebagai tempat wisata, Benteng Ollo sering digunakan untuk acara budaya seperti pertunjukan seni dan festival lokal. Hal ini menjadikannya simbol penting bagi masyarakat setempat.</p>
+    </section>
+
+    <section id="attractions" class="section">
+        <h2>Daya Tarik Benteng Ollo</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li>🌳<strong>Sejarah yang Kaya:</strong> Benteng ini menyimpan banyak cerita dari masa penjajahan, menjadikannya tempat yang menarik bagi para penggemar sejarah.</li>
+            <li>🌿<strong>Arsitektur Unik:</strong> Dinding tebal dari batu yang dibangun dengan teknik kuno menjadi daya tarik tersendiri.</li>
+            <li>🌳<strong>Pemandangan Indah:</strong> Lokasinya yang berada di tempat strategis menawarkan pemandangan alam yang memukau.</li>
+            <li>🌿<strong>Acara Budaya:</strong> Benteng sering digunakan untuk berbagai acara seni dan festival lokal yang memperkaya pengalaman pengunjung.</li>
+            <li>🌳<strong>Wisata Edukasi:</strong> Tempat ini sering dijadikan lokasi pembelajaran bagi siswa dan peneliti yang ingin mengetahui lebih dalam tentang sejarah dan budaya lokal.</li>
+        </ul>
+        <p>Selain sebagai tempat wisata, Benteng Ollo sering digunakan untuk acara budaya seperti pertunjukan seni dan festival lokal. Hal ini menjadikannya simbol penting bagi masyarakat setempat.</p>
+    </section>
+    <section id="gallery" class="section">
+        <h2>Galeri</h2>
+        <p>Beberapa gambar yang dapat menjadi inspirasi untuk Anda berkunjung di goa kontamale : </p>
+        <div class="gallery">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5jbv7lIP9HiaGIPcMwS8XQJcr4YFLOepU1tCIL22TNZURQl8SuXtp--Ba-GhuIlhY3sE&usqp=CAU" alt="Pemandangan Goa Kontamale 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGXt3K7WQwrkpmPWaNqMjQCZGGAa32aqQ_OF3GOp5I61lrPk2tJQrjLkrZhVko_csk3bE&usqp=CAU" alt="Pemandangan Goa Kontamale 2">
+            <img src="https://c1.staticflickr.com/5/4840/30947726977_63cf56cdf5_b.jpg" alt="Pemandangan Goa Kontamale 3">
+            <img src="https://c1.staticflickr.com/5/4859/45162609534_47dd6042a4_b.jpg" alt="Pemandangan Goa Kontamale 3">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3ea5_-ydXD35N783gyuRVlN-dnovFWX8gqvJj5PU0EfFUkoVrMPuuIcSdbT8F3GJvXewMOEBjYg9cDV1xD65jDzgfiY9mtEMj91Oq12V5PU022zQEcKsV5vruJnx7JMhY_Pb75S4mUE5r/s1600/MASJID++agung+bente.jpg" alt="Pemandangan Goa Kontamale 3">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipM04URobMcxAagv6f6UdRmNMlhLRnylerNzNepp=w408-h725-k-no" alt="Pemandangan Goa Kontamale 3">
+        </div>
+    </section>
+
+    <section id="articles" class="section">
+        <h2>Artikel</h2>
+        <p>Beberapa artikel yang dapat membantu Anda memahami lebih dalam tentang goa kontamale</p>
+        <div class="articles">
+            <div class="article">
+                <img src="https://i.ytimg.com/vi/FZp9PCFsuXM/sddefault.jpg" alt="Wowine" class="event-img">
+                <h3>Sejarah lengkap benteng Ollo</h3>
+                <p>Pelajari lebih dalam tentang Benteng Ollo dan cerita rakyat yang mengelilinginya.</p>
+                <a href="#" class="btn">Baca Selengkapnya</a>
+            </div>
+            <div class="article">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPuMxzkeMllqZdmLG7zeWCjPxktK8kq26zsVrwuKnv50NZzBwwodPJNY4tO9mATT74PkE&usqp=CAU" alt="Wowine" class="event-img">
+                <h3>Tips Berkunjung ke Benteng Ollo</h3>
+                <p>Temukan panduan lengkap untuk menjelajahi Benteng Ollo dengan aman dan nyaman.</p>
+                <a href="#" class="btn">Baca Selengkapnya</a>
+            </div>
+            <div class="article">
+                <img src="https://img.antarafoto.com/cache/400x300/2017/09/17/karia-henauka-wowine-flqr-dom.jpg" alt="Wowine" class="event-img">
+                <h3>Budaya Dan Tradisi Masyarakat Sekitar Benteng Ollo</h3>
+                <p>Kenali Budaya dan Tradisi unik yang hidup di sekitar Benteng Ollo.</p>
+                <a href="#" class="btn">Baca Selengkapnya</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="section">
+        <h2>Lokasi</h2>
+        <p>Goa Kontamale terletak di Desa Wandoka, Kecamatan Wangi-Wangi, Kabupaten Wakatobi.</p>
+        <div id="map" style="width: 100%; height: 300px; border: 2px solid #4CAF50; border-radius: 10px;"></div>
+    </section>
+    <section class="comment-section">
+        <h3>Kolom Komentar</h3>
+        <form id="comment-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+            
+            <label for="comment">Komentar:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Tulis komentar Anda di sini" required></textarea>
+            
+            <button type="submit">Kirim Komentar</button>
+        </form>
+        <div id="comment-list">
+            <h4>Komentar Pengunjung:</h4>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Goa Kontamale. Semua Hak Dilindungi.</p>
+        <p>Temukan kami di <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </footer>
+
+    <script>
+        function initMap() {
+            const kontamale = { lat: -5.335, lng: 123.590 };
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: kontamale,
+            });
+            new google.maps.Marker({
+                position: kontamale,
+                map: map,
+            });
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+    // Scroll to section when navigation link is clicked
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", event => {
+            event.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }
+        });
+    });
+
+    // Add active class to navigation link on scroll
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const navLink = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+            if (entry.isIntersecting) {
+                navLink.classList.add("active");
+            } else {
+                navLink.classList.remove("active");
+            }
+        });
+    }, { threshold: 0.6 });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Add hover effect to gallery images
+    const galleryImages = document.querySelectorAll(".gallery img");
+    galleryImages.forEach(img => {
+        img.addEventListener("mouseover", () => {
+            img.style.filter = "brightness(1.2)";
+        });
+
+        img.addEventListener("mouseout", () => {
+            img.style.filter = "brightness(1)";
+        });
+    });
+
+    // Smoothly scroll back to top
+    const backToTopBtn = document.createElement("button");
+    backToTopBtn.textContent = "↑";
+    backToTopBtn.style.position = "fixed";
+    backToTopBtn.style.bottom = "20px";
+    backToTopBtn.style.right = "20px";
+    backToTopBtn.style.padding = "10px 15px";
+    backToTopBtn.style.border = "none";
+    backToTopBtn.style.borderRadius = "50%";
+    backToTopBtn.style.backgroundColor = "#4CAF50";
+    backToTopBtn.style.color = "white";
+    backToTopBtn.style.cursor = "pointer";
+    backToTopBtn.style.display = "none";
+    backToTopBtn.style.zIndex = "1000";
+    document.body.appendChild(backToTopBtn);
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Enhance "Read More" buttons
+    const readMoreButtons = document.querySelectorAll(".article-content a");
+    readMoreButtons.forEach(button => {
+        button.style.padding = "10px 15px";
+        button.style.border = "2px solid #4CAF50";
+        button.style.borderRadius = "5px";
+        button.style.backgroundColor = "white";
+        button.style.color = "#4CAF50";
+        button.style.textDecoration = "none";
+        button.style.fontWeight = "bold";
+        button.style.transition = "all 0.3s ease";
+
+        button.addEventListener("mouseover", () => {
+            button.style.backgroundColor = "#4CAF50";
+            button.style.color = "white";
+        });
+
+        button.addEventListener("mouseout", () => {
+            button.style.backgroundColor = "white";
+            button.style.color = "#4CAF50";
+        });
+    });
+    });
+    // Fungsi untuk menangani pengiriman komentar
+    document.getElementById("comment-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    // Ambil nilai dari input
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+
+    // Buat elemen komentar baru
+    const commentItem = document.createElement("div");
+    commentItem.classList.add("comment-item");
+    commentItem.innerHTML = `<strong>${name}:</strong><p>${comment}</p>`;
+
+    // Tambahkan komentar ke daftar
+    const commentList = document.getElementById("comment-list");
+    commentList.appendChild(commentItem);
+
+    // Bersihkan form
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+
+    if (!name.trim() || !comment.trim()) {
+        alert("Nama dan komentar tidak boleh kosong!");
+        return;
+    }
+    
+});
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>

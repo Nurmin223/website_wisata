@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakatobi Wave</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+        }
+        .hero {
+            background: linear-gradient(rgba(146, 145, 145, 0.6), rgba(182, 182, 182, 0.6)), url('https://www.wakatobitourism.com/wp-content/uploads/2018/05/Untitled-2-1.jpg') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        .container {
+             width: 80%;
+             margin: 0 auto;
+             padding: 20px;
+        }
+        .container .gallery {
+            display: flex;
+            margin: 10px;
+        }
+        .section {
+            padding: 40px 10px;
+            background-color: #fff;
+        }
+        .section h2 {
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .section.bg-light {
+            background-color: #f9f9f9;
+        }
+        .btn-primary {
+            background-color: #72cdf1;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #467eba;
+        }
+        .gallery img {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .image {
+            margin-right: 10px;
+            width: 500px;
+            align-items: center;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .col-md-4 {
+            text-align: center;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .col-md-4:hover {
+            transform: translateY(-10px);
+        }
+        .col-md-4 .btn {
+            text-decoration: none;
+            color: white;
+            background-color: #72cdf1;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+        .col-md-4 .btn:hover {
+            background-color: #467eba;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+        .container img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1 class="display-4">Selamat Datang di Wakatobi Wave</h1>
+        <p class="lead">Rayakan budaya yang kaya dan kuliner yang menakjubkan di Wakatobi.</p>
+        <a href="#tentang" class="btn btn-primary">Pelajari Lebih Lanjut</a>
+    </div>
+</section>
+
+<!-- Tentang Section -->
+<section id="tentang" class="section bg-light">
+    <div class="container">
+        <h2 class="text-center">Tentang Wakatobi Wave</h2>
+        <p class="text-center">Wakatobi Wave adalah acara tahunan yang merayakan budaya unik, keindahan laut, dan Kuliner yang Lezat Khas Wakatobi. Bergabunglah dengan kami untuk berbagai aktivitas seru, manjakan mata dan lidah dalam keindahan festival budaya, dan kearifan lokal !</p>
+    </div>
+</section>
+
+<section id="karnaval">
+    <div class="container">
+        <h2>Wakatobi Wave</h2>
+        <p>Jadilah bagian dari kemeriahan Wakatobi Wave dengan penuh bahagia dan keindahan.</p>
+        <ul>
+            <li><strong>Jadwal:</strong> Tanggal | Alun-Alun Merdeka</li>
+            <li><strong>Lokasi:</strong> Kabupaten Wakatobi, Provinsi Sulawesi Tenggara</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Acara Section -->
+<section id="acara" class="section">
+    <div class="container">
+        <h2 class="text-center">Acara</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://img.okezone.com/content/2017/03/31/298/1655536/olahan-ikan-bisa-jadi-kuliner-andalan-khas-wakatobi-uVGgYfr4NY.jpg" class="img-fluid rounded mb-3" alt="Pameran Kuliner">
+                <h5>Pameran Kuliner</h5>
+                <p>Nikmati berbagai hidangan lezat Khas Wakatobi.</p>
+                <a href="#" class="btn">Baca Selengkapnya</a>
+            </div>
+            <div class="col-md-4">
+                <img src="https://telisik.id/assets/img/news/files/20210518_171812_compress54.jpg" class="img-fluid rounded mb-3" alt="Festival Budaya">
+                <h5>Festival Budaya</h5>
+                <p>Nikmati tarian dan kerajinan tradisional.</p>
+                <a href="#" class="btn">Baca Selengkapnya</a>
+            </div>
+            <div class="col-md-4">
+                <img src="https://cdn0-production-images-kly.akamaized.net/tZHitmsHQBMSaQQByQ7_spVqkYY=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5054813/original/073631300_1734424635-1734424295903.jpg" class="img-fluid rounded mb-3" alt="Pameran Kelautan">
+                <h5>Pameran Kelautan</h5>
+                <p>Pelajari tentang keanekaragaman hayati laut Wakatobi.</p>
+                <a href="#" class="btn">Baca Selengkapnya</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Galeri Section -->
+<section id="galeri" class="section bg-light">
+    <div class="container">
+        <h2 class="text-center">Galeri</h2>
+        <div class="row gallery">
+            <div class="image">
+                <img src="https://sultra.fajar.co.id/wp-content/uploads/2021/10/wakatobi-wave.jpg" class="img-fluid rounded mb-3" alt="Galeri Gambar 1">
+            </div>
+            <div class="image">
+                <img src="https://triaspolitika.id/wp-content/uploads/2023/11/Screenshot_20231104_200331_WhatsApp.jpg" class="img-fluid rounded mb-3" alt="Galeri Gambar 2">
+            </div>
+            <div class="image">
+                <img src="https://natmed.id/wp-content/uploads/2019/12/phpmk1esB.jpg" class="img-fluid rounded mb-3" alt="Galeri Gambar 3">
+            </div>
+            <div class="image">
+                <img src="https://mediawarta.com/wp-content/uploads/2016/12/mediawarta.com-wakatobi-surga-bawah-laut-indonesua.jpg" class="img-fluid rounded mb-3" alt="Galeri Gambar 1">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Kontak Section -->
+<section id="kontak" class="section">
+    <div class="container">
+        <h2 class="text-center">Kontak Kami</h2>
+        <form>
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" placeholder="Nama Anda">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email Anda">
+            </div>
+            <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows="5" placeholder="Pesan Anda"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Wakatobi Wave. Semua Hak Dilindungi.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

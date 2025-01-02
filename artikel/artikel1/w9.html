@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benteng Liya Togo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8eef1;
+            color: #333;
+        }
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://telisik.id/assets/img/news/files/IMG-20200929-WA0047.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 20px;
+        }
+        header .cta {
+            padding: 12px 30px;
+            background-color: #ff7f50;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        header .cta:hover {
+            background-color: #e3673a;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            color: #ff7f50;
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Nunito', sans-serif;
+        }
+        section p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .parallax {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .gallery img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .activities-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .activity-card {
+            width: 300px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .activity-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .activity-card-content {
+            padding: 20px;
+        }
+        .activity-card-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .activity-card-content p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        footer a {
+            color: #ff7f50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+         /* Kolom Komentar */
+         .comment-section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        .comment-section h3 {
+            margin-bottom: 15px;
+            color: #007acc;
+        }
+
+        .comment-section label {
+           display: block;
+           margin-bottom: 5px;
+           font-weight: bold;
+        }
+
+.comment-section input,
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.comment-section button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-section button:hover {
+    background-color: #005f99;
+}
+
+#comment-list {
+    margin-top: 20px;
+}
+
+#comment-list h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.comment-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e6f4f9;
+    border: 1px solid #cce6f0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+@media (max-width: 768px) {
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1rem;
+        }
+        header .cta {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+        nav a {
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+        section h2 {
+            font-size: 1.8rem;
+        }
+        section p {
+            font-size: 0.9rem;
+            padding: 0 10px;
+        }
+        .gallery img {
+            width: 150px;
+            height: 120px;
+        }
+        .activities-container {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .activity-card {
+            width: 100%;
+        }
+        .activity-card img {
+            height: 150px;
+        }
+        .activity-card-content h3 {
+            font-size: 1.2rem;
+        }
+        .activity-card-content p {
+            font-size: 0.9rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Puncak Kahyangan</h1>
+        <p>Keindahan alam yang memukau dari surga tersembunyi di Tomia</p>
+        <a href="#sejarah" class="cta">Mulai Perjalanan</a>
+    </header>
+    <nav>
+        <a href="#sejarah">Tentang</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#aktivitas">Aktivitas</a>
+        <a href="#lokasi">Lokasi</a>
+        <a href="#komen">Komentar</a>
+    </nav>
+    <section id="sejarah">
+        <h2>Tentang Puncak Kahyangan</h2>
+        <div class="parallax">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VFLbmyZfYnA?si=4-OCebpmVo2GGXn2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p>Puncak Kahyangan Tomia adalah salah satu destinasi wisata terbaik di Wakatobi. Dengan pemandangan matahari terbit dan terbenam yang memukau, tempat ini menjadi favorit para pelancong dan fotografer. Dari sini, Anda dapat melihat hamparan laut biru yang tak berujung dan pulau-pulau kecil yang tersebar di kejauhan.</p>
+    </section>
+    <section id="galeri">
+        <h2>Galeri</h2>
+        <p>foto-foto inspiratif yang dapat menjadi kenang-kenangan perjalanan Anda</p>
+        <div class="gallery">
+            <img src="https://media.telisik.id/assets/img/news/2021/08/6_destinasi_wisata_di_koltim_ini_cocok_jadi_pilihan_mengisi_liburan.jpg" alt="Benteng Liya Togo">
+            <img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/06/09/foto-1-1051067498.jpg" alt="Keindahan Benteng">
+            <img src="https://img.okezone.com/content/2015/01/05/406/1088173/puncak-kahyangan-di-wakatobi-HoPabUcjPs.jpg" alt="Budaya Lokal">
+            <img src="https://telisik.id/assets/img/news/2021/08/WhatsApp_Image_2021-08-05_at_09_47_59.jpeg" alt="Panorama Alam">
+            <img src="https://telisik.id/assets/img/news/2020/09/menjelajahi_puncak_kahyangan_setumpuk_keindahan_dari_wakatobi.jpg" alt="Panorama Alam">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/4e/6f/ad/puri-kahyangan-tomia.jpg?w=600&h=400&s=1" alt="Panorama Alam">
+            <img src="https://catperku.com/wp-content/uploads/5-blogger-sekaligus-1-blogger-wati-yang-narsis-di-bukit-tomia.jpg" alt="Panorama Alam">
+            <img src="https://img.okezone.com/okz/300/content/2017/04/28/406/1678683/nikmati-sajian-alam-yang-luar-biasa-di-tomia-yuk-SMJThZnBPV.JPG" alt="Panorama Alam">
+            <img src="https://asset-2.tstatic.net/sultra/foto/bank/images/kunjungi-puncak-kahyangan-pulau-tomia-kabupaten-wakatobi.jpg" alt="Panorama Alam">
+            <img src="https://asset.kompas.com/crops/trAVYk7iIjaGv0oYvaaaAlvRmi0=/0x70:1600x1137/750x500/data/photo/2023/02/06/63e103cf0c82e.jpg" alt="Panorama Alam">
+        </div>
+    </section>
+    <section id="aktivitas">
+        <h2>Aktivitas</h2>
+        <p>anda dapat melakukan berbagai kegiatan menarik di Benteng Liya Togo tetapi tetap menaati aturan dan pedoman yang berlaku</p>
+        <div class="activities-container">
+            <div class="activity-card">
+                <img src="https://hutanozon.wordpress.com/wp-content/uploads/2018/12/IMG-20181218-WA0015.jpg" alt="Menjelajahi Benteng">
+                <div class="activity-card-content">
+                    <h3>Keajaiban Puncak Kahyangan di Pagi Hari</h3>
+                    <p>Menyaksikan matahari terbit di Puncak Kahyangan adalah pengalaman yang tak terlupakan. Cahaya oranye keemasan perlahan menyinari langit, menciptakan pemandangan yang begitu indah dan menenangkan. Udara segar pagi hari menambah kesempurnaan momen ini.</p>
+                </div>
+            </div>
+            <div class="activity-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmGgc3dZMsr1LXZNb53JtSrsusM7iHzQQxPdnUyJR7VtP6kOHvNX2deneHHlo9Y0ceNX4&usqp=CAU" alt="Workshop Budaya">
+                <div class="activity-card-content">
+                    <h3>Kuliner Lokal yang Wajib Dicoba</h3>
+            <p>Setelah menikmati keindahan Puncak Kahyangan, sempatkan waktu untuk mencicipi kuliner khas Tomia seperti ikan bakar rica-rica dan jagung bose. Makanan lokal ini akan melengkapi pengalaman wisata Anda.</p>
+                </div>
+            </div>
+            <div class="activity-card">
+                <img src="https://media.telisik.id/assets/img/news/2020/12/puncak_sawerigadi_objek_wisata_pilihan_untuk_kemping.jpg" alt="Wisata Kuliner">
+                <div class="activity-card-content">
+                    <h3>Pengalaman Berkemah di Puncak Kahyangan</h3>
+            <p>Berkemah di Puncak Kahyangan adalah cara terbaik untuk menikmati malam penuh bintang dan kesunyian alam. Jangan lupa membawa peralatan camping yang lengkap dan menjaga kebersihan lingkungan selama berada di sana.</p>
+                </div>
+            </div>
+            <div class="activity-card">
+                <img src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/photo/indizone/2022/12/12/M7sk8Xl/indahnya-puncak-tomia-tempat-terbaik-melihat-gugusan-kepulauan-wakatobi54.jpg" alt="Fotografi Panorama">
+                <div class="activity-card-content">
+                    <h3>Fotografi Panorama</h3>
+                    <p>Untuk mendapatkan foto terbaik di Puncak Kahyangan, datanglah saat pagi atau sore hari. Gunakan tripod untuk menangkap panorama yang stabil, dan pastikan Anda membawa lensa wide-angle untuk menjangkau keindahan lanskap yang luas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="lokasi">
+        <h2>Lokasi</h2>
+        <p>Benteng Liya Togo terletak di Wakatobi, Sulawesi Tenggara. Anda dapat mengakses lokasi menggunakan kendaraan pribadi atau transportasi lokal.</p>
+        <div class="map-container">
+            <iframe 
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30187.127811412276!2d123.90953082219816!3d-5.739893731256234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2da71ac61560d2bb%3A0x1ac049754bbf582!2sKahiyanga%2C%20Kec.%20Tomia%20Tim.%2C%20Kabupaten%20Wakatobi%2C%20Sulawesi%20Tenggara!5e1!3m2!1sid!2sid!4v1735792452358!5m2!1sid!2sid" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+        </div>
+    </section>
+    <section id="komen" class="comment-section">
+        <h3>Kolom Komentar</h3>
+        <form id="comment-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+            
+            <label for="comment">Komentar:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Tulis komentar Anda di sini" required></textarea>
+            
+            <button type="submit">Kirim Komentar</button>
+        </form>
+        <div id="comment-list">
+            <h4>Komentar Pengunjung:</h4>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Benteng Liya Togo. Dibangun dengan cinta untuk pelestarian budaya dan sejarah.</p>
+        <p>Temukan kami di <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </footer>
+    <script>
+        // Fungsi untuk menangani pengiriman komentar
+    document.getElementById("comment-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    // Ambil nilai dari input
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+
+    // Buat elemen komentar baru
+    const commentItem = document.createElement("div");
+    commentItem.classList.add("comment-item");
+    commentItem.innerHTML = `<strong>${name}:</strong><p>${comment}</p>`;
+
+    // Tambahkan komentar ke daftar
+    const commentList = document.getElementById("comment-list");
+    commentList.appendChild(commentItem);
+
+    // Bersihkan form
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+
+    if (!name.trim() || !comment.trim()) {
+        alert("Nama dan komentar tidak boleh kosong!");
+        return;
+    }
+    
+});
+    </script>
+</body>
+</html>
+

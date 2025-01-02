@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Pantai Palahidu</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-image: url('https://telisik.id/assets/img/news/files/IMG-20210808-WA0009.jpg'); /* Ganti URL ini */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+            z-index: 2;
+            position: relative;
+        }
+        header p {
+            font-size: 1.5em;
+            z-index: 2;
+            position: relative;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .parallax {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .highlight ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .highlight ul li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .highlight ul li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .highlight ul li img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        footer a {
+            color: #ff7f50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .image-gallery img {
+            width: 220px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .cta {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .cta button {
+            background-color: #0288d1;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        .cta button:hover {
+            background-color: #026aa7;
+        }
+         /* Kolom Komentar */
+         .comment-section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        .comment-section h3 {
+            margin-bottom: 15px;
+            color: #007acc;
+        }
+
+        .comment-section label {
+           display: block;
+           margin-bottom: 5px;
+           font-weight: bold;
+        }
+
+.comment-section input,
+.comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.comment-section button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-section button:hover {
+    background-color: #005f99;
+}
+
+#comment-list {
+    margin-top: 20px;
+}
+
+#comment-list h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+.comment-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e6f4f9;
+    border: 1px solid #cce6f0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Pantai Palahidu</h1>
+        <p>Keindahan Eksotis di Selatan Indonesia</p>
+    </header>
+
+    <section>
+        <div class="highlight">
+            <h2>Tentang Pantai Palahidu</h2>
+            <div class="parallax">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7nxXAfWbQDw?si=X5JEPyuBVDyWzQqd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>Pantai Palahidu, yang terletak di Pulau Binongko, Kabupaten Wakatobi, Sulawesi Tenggara, adalah surga tersembunyi yang menawarkan pasir putih lembut, air laut yang jernih, dan pemandangan matahari terbenam yang memukau. Pantai ini cocok untuk Anda yang ingin menikmati suasana tenang dan alami.</p>
+        </div>
+
+        <div class="highlight">
+            <h2>Aktivitas yang Dapat Dilakukan</h2>
+            <ul>
+                <li>
+                    <img src="https://media.telisik.id/assets/img/news/2022/01/kartika_pantai_indah_konsel_yang_tak_tersentuh_pembangunan.jpeg" alt="Berenang di laut">
+                    <h3>Berenang</h3>
+                    <p>Rasakan segarnya air laut Pantai Palahidu yang tenang dan jernih.</p>
+                </li>
+                <li>
+                    <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/1200x675/photo/2024/06/25/309218525.jpg" alt="Snorkeling di Pantai Palahidu">
+                    <h3>Snorkeling</h3>
+                    <p>Jelajahi keindahan bawah laut dengan terumbu karang dan ikan-ikan warna-warni.</p>
+                </li>
+                <li>
+                    <img src="https://media.telisik.id/assets/img/news/2020/12/menikmati_pantai_dan_air_terjun_desa_wisata_namu.jpg" alt="Matahari terbenam">
+                    <h3>Menikmati Sunset</h3>
+                    <p>Abadikan momen romantis saat matahari terbenam di cakrawala.</p>
+                </li>
+                <li>
+                    <img src="https://asset-2.tstatic.net/sultra/foto/bank/images2/Pesona-Wasabi-Nua-Destinasi-Tersembunyi-Wakatobi-Sulawesi-Tenggara.jpg" alt="Fotografi di pantai">
+                    <h3>Fotografi</h3>
+                    <p>Temukan sudut terbaik untuk foto-foto menakjubkan.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <h2>Galeri Foto</h2>
+            <div class="image-gallery">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi3DZzcuXODY8Myf9Sc3aUj97fUApCwl7xVA&s" alt="Pemandangan pantai">
+                <img src="https://telisik.id/assets/img/news/2021/07/eksotisme_pantai_palahidu_perpaduan_sejarah_dan_keindahan_alam_pulau_binongko.jpg" alt="Pasir putih">
+                <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/11/2023/11/01/B3B7315A-326D-4570-83AB-381483EC1BC8-1126003438.jpeg" alt="Matahari terbenam">
+                <img src="https://i1.wp.com/www.needsindex.com/wp-content/uploads/2016/01/Pantai-Palahidu.jpg" alt="Aktivitas snorkeling">
+                <img src="https://media.telisik.id/assets/img/news/2020/12/wakatobi_buka_tempat_wisata_di_tahun_baru_wisatawan_domestik_boleh_berkunjung.jpg" alt="Aktivitas snorkeling">
+                <img src="https://superlive.id/storage/articles/b8f5f606-b0d8-4d8c-b2c3-0a1a410419bf.jpg" alt="Aktivitas snorkeling">
+                <img src="https://www.jabatowisata.com/index/jabato/files/pulauhogamainimg1.jpg" alt="Aktivitas snorkeling">
+                <img src="https://static.promediateknologi.id/crop/0x812:1080x1562/750x500/webp/photo/p1/00/2023/10/27/Screenshot_2023-10-27-19-54-23-473_commiuigallery-844360458.jpg" alt="Aktivitas snorkeling">
+                <img src="https://melampa.com/wp-content/uploads/2018/11/Enjoy-unforgotable-snorkeling-activity-in-Indonesia.jpg" alt="Aktivitas snorkeling">
+                <img src="https://www.wakatobitourism.com/wp-content/uploads/2018/04/Palahidu-Beach-by-Amal-Hermawan.jpg" alt="Aktivitas snorkeling">
+            </div>
+        </div>
+
+        <div class="highlight">
+            <h2>Informasi Lokasi</h2>
+            <p>Pantai Palahidu berlokasi di Pulau Binongko, Kabupaten Wakatobi, Sulawesi Tenggara. Akses ke pantai ini dapat melalui kapal dari Wangi-Wangi ke pualu binongko setelah itu menggunakan transportasi darat lokal.</p>
+        </div>
+
+        <div class="cta">
+            <button>Rencanakan Liburan Anda</button>
+        </div>
+    </section>
+    <section class="comment-section">
+        <h3>Kolom Komentar</h3>
+        <form id="comment-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+            
+            <label for="comment">Komentar:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Tulis komentar Anda di sini" required></textarea>
+            
+            <button type="submit">Kirim Komentar</button>
+        </form>
+        <div id="comment-list">
+            <h4>Komentar Pengunjung:</h4>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Wisata Pantai Palahidu. Semua Hak Dilindungi.</p>
+        <p>Temukan kami di <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </footer>
+    <script>
+        // Fungsi untuk menangani pengiriman komentar
+    document.getElementById("comment-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    // Ambil nilai dari input
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+
+    // Buat elemen komentar baru
+    const commentItem = document.createElement("div");
+    commentItem.classList.add("comment-item");
+    commentItem.innerHTML = `<strong>${name}:</strong><p>${comment}</p>`;
+
+    // Tambahkan komentar ke daftar
+    const commentList = document.getElementById("comment-list");
+    commentList.appendChild(commentItem);
+
+    // Bersihkan form
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+
+    if (!name.trim() || !comment.trim()) {
+        alert("Nama dan komentar tidak boleh kosong!");
+        return;
+    }
+    
+});
+    </script>
+</body>
+</html>
