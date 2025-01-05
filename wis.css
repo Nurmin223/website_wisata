@@ -182,8 +182,8 @@ section p {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .event-card:hover {
@@ -204,7 +204,8 @@ section p {
 .event-details {
     padding: 15px;
     background-color: #fff;
-    text-align: left;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px); /* 3 kolom pada layar besar */
 }
 
 .event-details h2 {
@@ -296,7 +297,7 @@ figcaption {
     .gallery figure {
         flex: 1 1 calc(33.33% - 20px); /* Adjust width to fit 3 images per row with gaps on smaller screens */
     }
-    .event-card {
+    .event-details {
         flex: 1 1 calc(33.33% - 20px);
     }
 }
@@ -305,8 +306,13 @@ figcaption {
     .gallery figure {
         flex: 1 1 calc(50% - 20px); /* Adjust width to fit 2 images per row with gaps on smaller screens */
     }
-    .event-card {
+    .event-details {
         flex: 1 1 calc(50% - 20px);
+    }
+}
+@media (max-width: 480px) {
+    .event-details {
+        flex: 1 1 100%; /* 1 kolom pada ponsel */
     }
 }
 
