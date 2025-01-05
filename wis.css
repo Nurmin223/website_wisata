@@ -296,11 +296,17 @@ figcaption {
     .gallery figure {
         flex: 1 1 calc(33.33% - 20px); /* Adjust width to fit 3 images per row with gaps on smaller screens */
     }
+    .event-card {
+        flex: 1 1 calc(33.33% - 20px);
+    }
 }
 
 @media (max-width: 480px) {
     .gallery figure {
         flex: 1 1 calc(50% - 20px); /* Adjust width to fit 2 images per row with gaps on smaller screens */
+    }
+    .event-card {
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
